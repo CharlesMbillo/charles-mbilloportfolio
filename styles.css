@@ -1169,7 +1169,10 @@ blockquote {
   }
 }
 /* Contact Form Styles */
-.contact {
+
+.contact-grid {
+  grid-template-columns: 1fr;
+}.contact {
   padding: 4rem 0;
   background: #f9f9f9;
 }
