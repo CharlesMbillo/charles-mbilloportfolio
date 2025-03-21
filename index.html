@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Charles Mbillo - Portfolio</title>
+    <style>
+        /* Hero Section Styles */
+        .hero-section {
+            background-color: #000;
+            color: #fff;
+            padding: 8rem 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .hero-text {
+            flex: 1;
+            
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 400px;
+            border-radius: 50%;
+            border: 4px solid #2ecc71;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            color: #2ecc71;
+            margin-bottom: 2rem;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            max-width: 600px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: #2ecc71;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-image img {
+                max-width: 250px;
+            }
+        }
+    </style>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="container flex items-center justify-between">
+            <div class="left flex justify-right">
+                <div class="logo">
+                    <a href="/">CM</a>
+                </div>
+                <div class="nav-links">
+                    <a href="#hero">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#projects">Projects</a>
+
+  <a href="#contact">Contact</a>                  
+                    
+                </div>
+            </div>
+            <div class="right">
+                  <!-- Add Calendly widget CSS and JS -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+</head>
+<body>
+
+<!-- Contact Button -->
+<button class="btn btn-primary" onclick="initCalendly()">
+    Schedule Meeting
+</button>
+
+<script>
+// Initialize Calendly after ensuring the script is loaded
+function initCalendly() {
+    if (typeof Calendly !== 'undefined') {
+        Calendly.initPopupWidget({
+            url: 'https://calendly.com/mbillocharles/client'
+        });
+    } else {
+        console.error('Calendly script not loaded');
+        // Optionally reload the script
+        loadCalendlyScript();
+    }
+}
+
+// Fallback script loader
+function loadCalendlyScript() {
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    script.onload = () => initCalendly();
+    document.head.appendChild(script);
+}
+
+// Optional: Preload on document ready
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof Calendly === 'undefined') {
+        loadCalendlyScript();
+    }
+});
+</script>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero container flex items-center justify-between">
+            <div class="left flex-1">
+                <img src="./images/charles_profile.png" loading="lazy" alt="Charles Mbillo profile picture">
+            </div>
+            <div class="right flex-1">
+                <h3>Charles Mbillo</h3>
+                <h1> <span>Full-Stack Developer | Cloud | Data Specialist | </span> & Founder </h1>
+                 <p class="tagliner"> AWS Certified Cloud Practitioner | Data Solutions Provider & | Tech Entrepreneur</p>
+                <p class="hero-description">Specializing in scalable and ethical digital (web/mobile) solutions/technologies that drive economic empowerment.</p>
+                
+                <a href="./charles_resume.pdf" download class="btn btn-secondary">Download CV</a>
+            </div>
+        </section>
+
+      
+
+<!--section id="about" class="about container flex items-center">
+            <div class="left flex-1">
+                <img src="./images/charles_plp.jpg" loading="lazy" alt="Charles at PLP">
+            </div>
+            <div class="left flex-1">
+                <h2>About <span>Me</span></h2>
+          
+            <header class="summary-header">
+            <h1>Charles Mbillo</h1>
+            <p class="professional-title">Full-Stack Developer | Cloud & Data Solutions Provider | Tech Entrepreneur</p>
+            <class="certification-badge">
+                <p><i class="fab fa-aws"></i>
+                <span>AWS Certified Cloud Practitioner</span><p> <!--<br><br><br<div data-iframe-width="400" data-iframe-height="230" data-share-badge-id="1d468bdd-b3f8-4508-b53a-df1a339b4058" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script-->
+            <!--/div-->
+<!--section id="about" class="about-section container flex items-center">
+    
+        <div class="about-content left flex-1">
+        
+                <img src="./images/charles_plp.jpg" loading="lazy" alt="Charles at PLP">
+            
+        
+                <h2>About <span>Me</span></h2>
+            <div class="about-header">
+                <h2>Charles Mbillo</h2>
+                <p class="professional-title">Full-Stack Devloper (Web, App) | Data & Cloud Solutions Provider
+            </div>
+            <div class="certification-badge">
+                <div data-iframe-width="400" data-iframe-height="230" data-share-badge-id="1d468bdd-b3f8-4508-b53a-df1a339b4058" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+            </div>
+       
+            
+            <div class="core-expertise">
+                <h3>Core Expertise</h3>
+                <ul class="expertise-list">
+                    <li>Full-Stack Development</li>
+                    <li>Cloud Infrastructure (AWS)</li>
+                    <li>Data Solutions Architecture</li>
+                    <li>Enterprise IT Consulting</li>
+                </ul>
+            </div>
+
+            <div class="specializations">
+                <h3>Technical Focus Areas</h3>
+                <div class="specialization-grid">
+                    <div class="specialization-card">
+                        <h4>Web & Mobile Solutions</h4>
+                        <ul>
+                            <li>Progressive Web Apps</li>
+                            <li>Cross-Platform Development</li>
+                            <li>Ed-Tech Platforms</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="specialization-card">
+                        <h4>Economic Technology</h4>
+                        <ul>
+                            <li>Financial Inclusion Systems</li>
+                            <li>Ethical AI Implementations</li>
+                            <li>Transparency-First Solutions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="professional-philosophy">
+                <h3>Development Philosophy</h3>
+                <p class="philosophy-statement">
+                    "I create technology solutions that combine technical excellence with economic morality, 
+                    focusing on sustainable and ethical digital transformation."
+                </p>
+            </div>
+
+            <div class="technical-competencies">
+                <h3>Technical Arsenal</h3>
+                <div class="competency-grid">
+                    <div class="competency-category">
+                        <h4>Frontend Mastery</h4>
+                        <ul>
+                            <li>React/Next.js Ecosystem</li>
+                            <li>Vue/Nuxt Framework</li>
+                            <li>Mobile-First Design</li>
+                        </ul>
+                    </div>
+
+                    <div class="competency-category">
+                        <h4>Cloud & DevOps</h4>
+                        <ul>
+                            <li>AWS Infrastructure</li>
+                            <li>CI/CD Pipelines</li>
+                            <li>Container Orchestration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>                  
+                    <!-- Content Column -->
+                    <section id="about" class="about container flex items-center">
+                        <div class="about-content-wrapper flex">
+                            <!-- Image Column -->
+                            <div class="image-column flex-1">
+                                <img src="./images/charles_plp.jpg" loading="lazy" 
+                                     alt="Charles Mwangi - Professional Web Developer" 
+                                     class="profile-image responsive-img">
+                            </div>
+                    
+                            <!-- Content Column -->
+                            <div class="content-column flex-2">
+                                <div class="summary-header">
+                                    <h2 class="section-title">About Me</h2>
+                                    
+                                    <div class="text-content">
+                                        <p class="summary-intro">
+                                            A versatile technologist with 10+ years of experience architecting full-stack solutions that blend innovation with social impact. AWS Certified Cloud Practitioner specializing in ethical web/mobile solutions and economic empowerment technologies. Based in Nairobi-Kenya, I deliver:
+                                        </p>
+                    
+                                        <div class="certification-badge">
+                                            <div data-iframe-width="290" 
+                                                 data-iframe-height="230" 
+                                                 data-share-badge-id="1d468bdd-b3f8-4508-b53a-df1a339b4058" 
+                                                 data-share-badge-host="https://www.credly.com">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!--div class="professional-summary">
+                                    <!-- Expert Services & Value Proposition Columns -->
+                                    <!--div class="core-expertise">
+                                        <h3>Core Expertise</h3>
+                                        <ul class="expertise-list">
+                                            <li>Full-Stack Development</li>
+                                            <li>Cloud Infrastructure (AWS)</li>
+                                            <li>Data Solutions Architecture</li>
+                                            <li>Enterprise IT Consulting</li>
+                                        </ul>
+                                    </div>
+                        
+                                    <div class="specializations">
+                                        <h3>Technical Focus Areas</h3>
+                                        <div class="specialization-grid">
+                                            <div class="specialization-card">
+                                                <h4>Web & Mobile Solutions</h4>
+                                                <ul>
+                                                    <li>Progressive Web Apps</li>
+                                                    <li>Cross-Platform Development</li>
+                                                    <li>Ed-Tech Platforms</li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <div class="specialization-card">
+                                                <h4>Economic Technology</h4>
+                                                <ul>
+                                                    <li>Financial Inclusion Systems</li>
+                                                    <li>Ethical AI Implementations</li>
+                                                    <li>Transparency-First Solutions</li>
+                                                </ul>
+                                            </div>
+                                        
+                                    <div class="competency">
+                                        <div class="competency-grid">
+                                            <div class="competency-card">
+                                                <h4>Frontend Mastery</h4>
+                                                <ul>
+                                                    <li>React/Next.js Ecosystem</li>
+                                                    <li>Vue/Nuxt Framework</li>
+                                                    <li>Mobile-First Design</li>
+                                                </ul>
+                                            </div>
+                        
+                                            <div class="competency-card">
+                                                <h4>Cloud & DevOps</h4>
+                                                <ul>
+                                                    <li>AWS Infrastructure</li>
+                                                    <li>CI/CD Pipelines</li>
+                                                    <li>Container Orchestration</li>
+                                                </ul>
+                                            </div-->
+                                       
+                                    <div class="columns-container flex gap-2">
+                                        <!-- Expert Services Column -->
+                                        <div class="expert-services-column flex-1">
+                                            <h3>Core Expertise Services</h3>
+                                            <ul class="services-list">
+                                                <li class="expertise-item">
+                                                    <!--i class="fas fa-check"></i-->
+                                                    <div class="expertise-content">
+                                                        <h4>Scalable Web & Mobile Apps</h4>
+                                                        <p>Ed-Tech, Financial Inclusion Systems</p>
+                                                    </div>
+                                                </li>
+                                                <li class="expertise-item">
+                                                    <!--i class="fas fa-check"></i-->
+                                                    <div class="expertise-content">
+                                                        <h4>Cloud Infrastructure</h4>
+                                                        <p>AWS Services, DevOps, Data Solutions</p>
+                                                    </div>
+                                                </li>
+                                                <li class="expertise-item">
+                                                    <!--i class="fas fa-check"></i-->
+                                                    <div class="expertise-content">
+                                                        <h4>End-to-End Application Development, Deployment, Scaling, and Monitoring</h4>
+                                                        <p>UI/UX Design → Deployment → SEO Optimization</p>
+                                                    </div>
+                                                </li>
+                                                <li class="expertise-item">
+                                                    <!--i class="fas fa-check"></i-->
+                                                    <div class="expertise-content">
+                                                        <h4>Data Solutions</h4>
+                                                        <p>Engineering, Warehousing, Analytics</p>
+                                                    </div>
+                                                </li>
+                                                <li class="expertise-item">
+                                                    <!--i class="fas fa-check"></i-->
+                                                    <div class="expertise-content">
+                                                        <h4>Tech Entrepreneurship</h4>
+                                                        <p>Founder, Mentorship, Business Development</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                    
+                                        <!-- Value Proposition Column -->
+                                        <div class="value-proposition-column flex-1">
+                                            <h3>Technical Value Proposition</h3>
+                                            <ul class="value-list">
+                                                <li class="value-item">
+                                                    <i class="fas fa-redo-alt"></i>
+                                                    <div class="value-content">
+                                                        <h4>360° Development Capabilities</h4>
+                                                        <p>Entire application lifecycle, from code to production.</p>
+                                                    </div>
+                                                </li>
+                                                <li class="value-item">
+                                                    <i class="fas fa-laptop-code"></i>
+                                                    <div class="value-content">
+                                                        <h4>Modern Stack Proficiency</h4>
+                                                        <div class="tech-stack">
+                                                            <span class="tech-pill">Python</span>
+                                                            <span class="tech-pill">React</span>
+                                                            <span class="tech-pill">Node.js</span>
+                                                            <span class="tech-pill">AWS</span>
+                                                            <span class="tech-pill">IaC</span>
+                                                            <span class="tech-pill">NoSQL (DynamoDB)</span>
+                                                            <span class="tech-pill">MySQL</span>
+                                                            <span class="tech-pill">MongoDB (Hybrid)</span>
+                                                            <span class="tech-pill">GitHub</span>
+                                                            <span class="tech-pill">AI/ML</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="value-item">
+                                                    <i class="fas fa-hand-holding-heart"></i>
+                                                    <div class="value-content">
+                                                        <h4>Ethical Tech Focus</h4>
+                                                        <p>Sustainable business growth solutions</p>
+                                                    </div>
+                                                </li>
+                                                <li class="value-item">
+                                                    <i class="fas fa-users"></i>
+                                                    <div class="value-content">
+                                                        <h4>Collaborative Approach</h4>
+                                                        <p>Team-oriented problem solving</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                    
+                                    <!-- Additional Content from Original HTML -->
+                                    <div class="expertise-highlights">
+                                        <div class="columns-container flex">
+                                            <div class="expertise-column flex-1">
+                                                <h3>Core Competencies</h3>
+                                                <ul class="expertise-list">
+                                                    <li><i class="fas fa-cloud"></i> Cloud Platforms (AWS)</li>
+                                                    <li><i class="fas fa-code"></i> Full-Stack Development</li>
+                                                    <li><i class="fas fa-database"></i> Data Solutions</li>
+                                                    <li><i class="fas fa-code-branch"></i> DevOps & CI/CD</li>
+                                                </ul>
+                                            </div>
+                    
+                                            <div class="expertise-column flex-1">
+                                                <h3>Technical Focus</h3>
+                                                <ul class="expertise-list">
+                                                    <li><i class="fab fa-react"></i> React/Node.js Ecosystem</li>
+                                                    <li><i class="fab fa-python"></i> Python Data Pipelines</li>
+                                                    <li><i class="fas fa-server"></i> Serverless Architecture</li>
+                                                    <li><i class="fas fa-building"></i> Microservices & API</li>
+                                                    <li><i class="fas fa-building"></i> Robotics, AI & IoT</li>
+                                                    <li><i class="fas fa-building"></i> Enterprise Solutions</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                    
+                                    <!--div class="core-differentiator">
+                                        <blockquote class="philosophy-statement">
+                                            <i class="fas fa-quote-left"></i>
+                                            "I bridge technical excellence with economic morality, creating digital solutions that empower while performing."
+                                        </blockquote>
+                                    </div-->
+                                    <div class="professional-philosophy">
+                                        <h3>Development Philosophy (Differentiator)</h3>
+                                        <p class="philosophy-statement">
+                                            "I create technology solutions that combine technical excellence with economic morality, 
+                                            focusing on sustainable and ethical digital transformation."
+                                        </p>
+                                        <div class="right flex-1">
+                       <a href="./CHARLES MBILLO CV-f3.pdf" download class="btn btn-secondary">Download CV</a>
+                       </div><br><div class="social-links">
+                        <a href="https://linkedin.com/in/charles-mbillo" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/yourprofile" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                                    </div>
+                                </div>
+                              </div>
+                        </div>
+                       </section>
+                       
+                    <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                    
+            </div>
+        </section>
+
+        <section id="services"> 
+          <section class="services" aria-label="Services">
+    <div class="container">
+        <h2 class="section-heading">Services</h2>
+        
+        <div class="services-grid">  
+          <div class="services container">
+            
+                <p>All your computing/digital needs... covered. </p>
+            <div class="card-grid">
+                <!-- Improved service cards with proper semantics -->       
+
+            <//article class="card service-card">
+                <//div class="card-image-wrapper">
+        <!-- Optimized responsive image with modern format -->
+    <//div data-iframe-width="290" data-iframe-height="230" data-share-badge-id="1d468bdd-b3f8-4508-b53a-df1a339b4058" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+    <///div>
+    <div class="card-content">
+        <h3 class="service-title">Cloud Computing Services</h3>
+        <div class="service-details">
+            <ul class="service-features" role="list">
+                <li class="feature-item">
+                   
+                    <svg aria-hidden="true" class="feature-icon" viewBox="0 0 24 24">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                    </svg>
+                    <span>Amazon EC2 Compute Services</span>
+                </li>
+                <li class="feature-item">
+                    <svg aria-hidden="true" class="feature-icon" viewBox="0 0 24 24">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                    </svg>
+                    <span>AWS Lambda Serverless Solutions</span>
+                </li>
+                <li class="feature-item">
+                    <svg aria-hidden="true" class="feature-icon" viewBox="0 0 24 24">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                    </svg>
+                    <span>AWS Outposts</span>
+                </li>
+                <li class="feature-item">
+                    <svg aria-hidden="true" class="feature-icon" viewBox="0 0 24 24">    
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                    </svg>
+                    <span>Infrastructure Management</span>
+                </li>
+                <li class="feature-item">
+                    <svg aria-hidden="true" class="feature-icon" viewBox="0 0 24 24">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                    </svg>        
+                    <span>Cloud Integration</span>    
+                </li>
+                <li class="feature-item">
+                    <svg aria-hidden="true" class="feature-icon" viewBox="0 0 24 24">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                    </svg>
+                    <span>Cybersecurity Protocols</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+                </article>
+
+    
+                 <article class="card">
+                    <img src="https://source.unsplash.com/800x600/?code" loading="lazy" alt=>
+
+     <div class="card-content">
+        <h3 class="service-title">Web Development Services</h3>
+        <div class="service-details">
+            <ul class="service-features" role="list">
+                <li class="feature-item">
+                   
+                    <svg aria-hidden="true" class="feature-icon" viewBox="0 0 24 24">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                    </svg>
+                    <span>Full-stack Development</span>
+                </li> 
+                <li class="feature-item">
+                    <svg aria-hidden="true" class="feature-icon" viewBox="0 0 24 24">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>    
+                    </svg>
+                    <span>Responsive Web Design</span>
+                </li>    
+                <li class="feature-item">
+                    <svg aria-hidden="true" class="feature-icon" viewBox="0 0 24 24">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>    
+                    </svg>
+                    <span>UI/UX Design</span>
+                </li>
+                <li class="feature-item">
+                    <svg aria-hidden="true" class="feature-icon" viewBox="0 0 24 24">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                    </svg>
+                    <span>SEO and Conversion Rate Optimization (CRO)</span>
+                </li>
+                <li class="feature-item">
+                    <svg aria-hidden="true" class="feature-icon" viewBox="0 0 24 24">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>    
+                    </svg>
+                    <span>Cloud Hosting</span>
+                </li>
+                <li class="feature-item">
+                    <svg aria-hidden="true" class="feature-icon" viewBox="0 0 24 24">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                    </svg>
+                                          
+                    <span>Web Media Branding & Management</span> 
+                </li>
+                <li class= "feature-item">
+                    <svg aria-hidden="true" class="feature-icon" viewBox="0 0 24 24">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                    </svg>
+                    <span>API Intezgration</span>
+                </li>
+                <li class="feature-item">    
+                    <svg aria-hidden="true" class="feature-icon" viewBox="0 0 24 24">    
+                        <path d="M12 4l-1.
+                                
+                                <div class="services-grid">41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>  
+                    </svg>
+                    <span>Cloud Migration</span>
+                </li> 
+                                                     
+                               <!-- Add more list items with SVG icons -->
+            </ul>          
+        </div>
+    </div>
+
+    </article> </section>
+    <section class="managed-services" aria-label="Managed Services">
+                            <div class="container">
+                                <h2 class="section-heading">Comprehensive Managed Services</h2>
+            
+        <div class="services-grid">
+            <!-- Core Services Card -->
+            <article class="service-card core-services" aria-labelledby="core-services-heading">
+                <div class="card-header">
+                    <svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/>
+                    </svg>
+                    <h3 id="core-services-heading">Core Managed Services</h3>
+                </div>
+                <ul class="service-list" role="list">
+                    <li class="service-item">
+                        <svg aria-hidden="true" class="bullet" viewBox="0 0 8 8">
+                            <circle cx="4" cy="4" r="4"/>
+                        </svg>
+                        <span>Managed Databases (SQL/NoSQL)</span>
+                    </li>
+                    <li class="service-item">
+                        <svg aria-hidden="true" class="bullet" viewBox="0 0 8 8">
+                            <circle cx="4" cy="4" r="4"/>
+                        </svg>
+                        <span>Enterprise Email Solutions</span>
+                    </li>
+                    <li class="service-item">
+                        <svg aria-hidden="true" class="bullet" viewBox="0 0 8 8">
+                            <circle cx="4" cy="4" r="4"/>
+                        </svg>
+                        <span>Managed Websites</span>
+                    </li>
+                    <li class="service-item">
+                        <svg aria-hidden="true" class="bullet" viewBox="0 0 8 8">
+                            <circle cx="4" cy="4" r="4"/>
+                        </svg>
+                        <span>Managed Mobile Apps</span>
+                    </li>
+                    <li class="service-item">
+                        <svg aria-hidden="true" class="bullet" viewBox="0 0 8 8">
+                            <circle cx="4" cy="4" r="4"/>
+                        </svg>
+                        <span>Managed APIs</span>
+                    </li>
+                    <!-- Add remaining core services -->
+                </ul>
+            </article>
+
+            <!-- Specialized Solutions Card -->
+            <article class="service-card specialized" aria-labelledby="specialized-heading">
+                <div class="card-header">
+                    <svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                    </svg>
+                    <h3 id="specialized-heading">Specialized Solutions</h3>
+                </div>
+                <div class="solution-grid">
+                    <!-- Solution content here -->
+                <h4>Data Management & Analytics</h4>
+                        <ul role="list">
+                            <li>AWS S3 Storage Solutions</li>
+                            <li>Kobo/ODK Data Collection</li>
+                            <li>Power BI & SPSS Analytics</li>
+                            <li>Python Data Pipelines</li>
+                            <li>MySQL/MongoDB Administration</li>
+                        </ul>
+                    </div>
+                <div class="solution-category">
+                        <h4>Business Systems</h4>
+                        <ul role="list">
+                            <li>ERP Solutions:
+                                <ul>
+                                    <li>Rance Lab Hotel POS</li>
+                                    <li>Tally Prime Agrovet IMS</li>
+                                    <li>Amonium Lite POS</li>
+                                </ul>
+                            </li>
+                            <li>E-Commerce Platform Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Optimization Card -->
+            <article class="service-card optimization" aria-labelledby="optimization-heading">
+                <div class="card-header">
+                    <svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                    </svg>
+                    <h3 id="optimization-heading">Optimization & Support</h3>
+                </div>
+                <ul class="service-list" role="list">
+                    <li>SEO & Conversion Rate Optimization (CRO)</li>
+                    <li>Full-cycle IT Consultancy</li>
+                    <li>24/7 Technical Support</li>
+                    <li>Internet Services Reselling</li>
+                    <li>Cybersecurity Management</li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</section>
+            
+              
+                <article class="card">    
+        <section id="projects" class="projects container">
+          <h2>Featured Projects</h2> 
+            <p> Current Ongoing ...</p>
+            <div class="card-grid">
+     
+                   <article class="card">
+                    <img src="https://source.unsplash.com/800x600/?code" loading="lazy" alt="projects">
+                    <h3>Community Based</h3>
+                    <ul>
+                        <li>USSD Guard Monitoring System</li>
+                        <li>Parish Census and Automation </li>
+                        <li>Library Management System </li><br><br>
+                    <a href="#" class="btn btn-primary">View Project</a>
+</ul>
+  </article>                            
+<article class="card">
+                    <img src="https://source.unsplash.com/800x600/?code" loading="lazy" alt=" featured projects">                        <h3>EdTech</h3>
+                    <ul> 
+                        <li>Offline Digital Content CBC</li> 
+                        <li>Online Digital Content CBC</li>
+                        <li>Learning Management System</li><br><br>
+                        
+                        
+                    <a href="#" class="btn btn-primary">View Project</a>
+</ul>
+               </article>         
+
+                <article class="card">
+                    <img src="https://source.unsplash.com/800x600/?code" loading="lazy" alt="featured projects">
+                    
+<h3>Fintech</h3>                          
+<ul>
+                        <li>USSD Based Sacco Transactions App</li>    <br><br>
+
+                    
+<a href="#" class="btn btn-primary">View Project</a>    </ul>              
+                </article>           
+               </div> </section>
+                    
+
+
+                        
+        <!-- Contact Section ->
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-wrapper">
+      <!-- Contact Form Left ->
+      <div class="contact-form">
+          <section id="contact" class="contact container">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out to me via email or social media.</p>
+            <form action="https://formspree.io/f/xblgrkln" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </div>
+        
+        <!-- Contact Info Right ->
+      <div class="contact-info">
+        <h2>Direct Contact</h2>
+        <div class="contact-method">
+          <i class="fas fa-phone-alt"></i>
+          <div>
+            <h3>Phone</h3>
+            <a href="tel:+254111810434">+254 111 810 434</a>
+          </div>
+        </div>
+
+        <div class="contact-method">
+          <i class="fab fa-whatsapp"></i>
+          <div>
+            <h3>WhatsApp</h3>
+            <a href="https://wa.me/254111810434" target="_blank">Start Chat</a>
+          </div>
+        </div>
+
+        <div class="contact-method">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h3>Email</h3>
+            <a href="mailto:mbillocharles@gmail.com">mbillocharles@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="contact-method">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h3>Location</h3>
+            <p>Nairobi, Kenya</p>
+            <a href="https://goo.gl/maps/..." target="_blank">View on Map</a>
+          </div>
+          
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Charles Mbillo. All rights reserved.</p>
+        </div>
+    </footer-->
+
+<!--********-->
+ <!-- Contact Section -->
+ <section id="contact" class="contact-section">
+    <div class="contact-grid">
+        <form class="contact-form" action="https://formspree.io/f/xblgrkln" method="POST">
+            <h2>Contact Me</h2>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="cta-button">Send Message</button>
+        </form>
+        <div class="contact-info">
+            <h2>Direct Contact</h2>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+254111810434">+254 111 810 434</a>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-whatsapp"></i>
+                <a href="https://wa.me/254111810434">WhatsApp Chat</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:mbillocharles@gmail.com">mbillocharles@gmail.com</a>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="footer">
+<p>&copy; <span id="year"></span> Charles Mbillo. All rights reserved.</p>
+<div class="social-links">
+    <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/yourprofile" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+    </a>
+    <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+    </a>
+</div>
+</footer>
+
+
+    <script>
+        // Dynamic copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
